@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1106</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Основная</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1045</width>
+             <height>1286</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="13" column="0">
+             <widget class="QLabel" name="label_11">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Командир части</string>
+              </property>
+             </widget>
+            </item>
+            <item row="37" column="1">
+             <widget class="QLineEdit" name="lineEdit_16"/>
+            </item>
+            <item row="33" column="1">
+             <widget class="QLineEdit" name="lineEdit_20"/>
+            </item>
+            <item row="41" column="1">
+             <widget class="QLineEdit" name="lineEdit_12"/>
+            </item>
+            <item row="30" column="0">
+             <widget class="QLabel" name="label_28">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Хирургический</string>
+              </property>
+             </widget>
+            </item>
+            <item row="41" column="0">
+             <widget class="QLabel" name="label_39">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Кем направлен на ВВК</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0" rowspan="2">
+             <widget class="QLabel" name="label_7">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Имя</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1" rowspan="2">
+             <widget class="QLineEdit" name="lineEdit_46"/>
+            </item>
+            <item row="22" column="0">
+             <widget class="QLabel" name="label_20">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Текущее отделение</string>
+              </property>
+             </widget>
+            </item>
+            <item row="21" column="0">
+             <widget class="QLabel" name="label_19">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>По договору</string>
+              </property>
+             </widget>
+            </item>
+            <item row="24" column="0">
+             <widget class="QLabel" name="label_22">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Диагноз</string>
+              </property>
+             </widget>
+            </item>
+            <item row="17" column="1">
+             <widget class="QLineEdit" name="lineEdit_36"/>
+            </item>
+            <item row="9" column="0">
+             <widget class="QLabel" name="label_3">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Контрактная служба</string>
+              </property>
+             </widget>
+            </item>
+            <item row="35" column="1">
+             <widget class="QLineEdit" name="lineEdit_18"/>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_10">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Дата поступления</string>
+              </property>
+             </widget>
+            </item>
+            <item row="38" column="1">
+             <widget class="QLineEdit" name="lineEdit_15"/>
+            </item>
+            <item row="24" column="1">
+             <widget class="QLineEdit" name="lineEdit_29"/>
+            </item>
+            <item row="36" column="0">
+             <widget class="QLabel" name="label_34">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Семейное положение</string>
+              </property>
+             </widget>
+            </item>
+            <item row="42" column="1">
+             <widget class="QLineEdit" name="lineEdit_11"/>
+            </item>
+            <item row="26" column="0">
+             <widget class="QLabel" name="label_24">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>ОРЗ</string>
+              </property>
+             </widget>
+            </item>
+            <item row="42" column="0">
+             <widget class="QLabel" name="label_40">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Перевод</string>
+              </property>
+             </widget>
+            </item>
+            <item row="35" column="0">
+             <widget class="QLabel" name="label_33">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Образование</string>
+              </property>
+             </widget>
+            </item>
+            <item row="37" column="0">
+             <widget class="QLabel" name="label_35">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Дети</string>
+              </property>
+             </widget>
+            </item>
+            <item row="40" column="0">
+             <widget class="QLabel" name="label_38">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Номер страхового полиса</string>
+              </property>
+             </widget>
+            </item>
+            <item row="34" column="1">
+             <widget class="QLineEdit" name="lineEdit_19"/>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="lineEdit_50"/>
+            </item>
+            <item row="50" column="1">
+             <widget class="QLineEdit" name="lineEdit_3"/>
+            </item>
+            <item row="8" column="0">
+             <widget class="QLabel" name="label_4">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Категория</string>
+              </property>
+             </widget>
+            </item>
+            <item row="15" column="0">
+             <widget class="QLabel" name="label_13">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Воинская часть</string>
+              </property>
+             </widget>
+            </item>
+            <item row="44" column="0">
+             <widget class="QLabel" name="label_42">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Диагноз при переводе</string>
+              </property>
+             </widget>
+            </item>
+            <item row="38" column="0">
+             <widget class="QLabel" name="label_36">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Серия удостоверения личности</string>
+              </property>
+             </widget>
+            </item>
+            <item row="43" column="0">
+             <widget class="QLabel" name="label_41">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Дата перевода</string>
+              </property>
+             </widget>
+            </item>
+            <item row="46" column="0">
+             <widget class="QLabel" name="label_44">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Текущее лечебное учреждение</string>
+              </property>
+             </widget>
+            </item>
+            <item row="32" column="0">
+             <widget class="QLabel" name="label_30">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Информация о родных</string>
+              </property>
+             </widget>
+            </item>
+            <item row="19" column="0">
+             <widget class="QLabel" name="label_17">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Молодой призыв</string>
+              </property>
+             </widget>
+            </item>
+            <item row="31" column="1">
+             <widget class="QLineEdit" name="lineEdit_22"/>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="lineEdit_49"/>
+            </item>
+            <item row="36" column="1">
+             <widget class="QLineEdit" name="lineEdit_17"/>
+            </item>
+            <item row="25" column="0">
+             <widget class="QLabel" name="label_23">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Находится на наблюдении у дежурного врача</string>
+              </property>
+             </widget>
+            </item>
+            <item row="49" column="1">
+             <widget class="QLineEdit" name="lineEdit_4"/>
+            </item>
+            <item row="47" column="1">
+             <widget class="QLineEdit" name="lineEdit_6"/>
+            </item>
+            <item row="51" column="1">
+             <widget class="QLineEdit" name="lineEdit_2"/>
+            </item>
+            <item row="39" column="1">
+             <widget class="QLineEdit" name="lineEdit_14"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_9">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Номер истории болезни</string>
+              </property>
+             </widget>
+            </item>
+            <item row="31" column="0">
+             <widget class="QLabel" name="label_29">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Должность</string>
+              </property>
+             </widget>
+            </item>
+            <item row="51" column="0">
+             <widget class="QLabel" name="label_49">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Дата смерти</string>
+              </property>
+             </widget>
+            </item>
+            <item row="16" column="0">
+             <widget class="QLabel" name="label_14">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Подразделение ТерО</string>
+              </property>
+             </widget>
+            </item>
+            <item row="17" column="0">
+             <widget class="QLabel" name="label_15">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Дата рождения</string>
+              </property>
+             </widget>
+            </item>
+            <item row="27" column="0">
+             <widget class="QLabel" name="label_25">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Пневмония</string>
+              </property>
+             </widget>
+            </item>
+            <item row="44" column="1">
+             <widget class="QLineEdit" name="lineEdit_9"/>
+            </item>
+            <item row="5" column="0" rowspan="2">
+             <widget class="QLabel" name="label_6">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Отчество</string>
+              </property>
+             </widget>
+            </item>
+            <item row="16" column="1">
+             <widget class="QLineEdit" name="lineEdit_37"/>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="lineEdit_48"/>
+            </item>
+            <item row="48" column="0">
+             <widget class="QLabel" name="label_46">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Статус</string>
+              </property>
+             </widget>
+            </item>
+            <item row="33" column="0">
+             <widget class="QLabel" name="label_31">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Домашний адрес</string>
+              </property>
+             </widget>
+            </item>
+            <item row="47" column="0">
+             <widget class="QLabel" name="label_45">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Предыдущее лечебное учреждение</string>
+              </property>
+             </widget>
+            </item>
+            <item row="50" column="0">
+             <widget class="QLabel" name="label_48">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Выписной диагноз</string>
+              </property>
+             </widget>
+            </item>
+            <item row="20" column="0">
+             <widget class="QLabel" name="label_18">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>ОМС</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1" rowspan="2">
+             <widget class="QLineEdit" name="lineEdit_47"/>
+            </item>
+            <item row="34" column="0">
+             <widget class="QLabel" name="label_32">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Контактный телефон</string>
+              </property>
+             </widget>
+            </item>
+            <item row="14" column="0">
+             <widget class="QLabel" name="label_12">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Заместитель командира</string>
+              </property>
+             </widget>
+            </item>
+            <item row="18" column="1">
+             <widget class="QLineEdit" name="lineEdit_35"/>
+            </item>
+            <item row="10" column="0" rowspan="2">
+             <widget class="QLabel" name="label_2">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>УрО</string>
+              </property>
+             </widget>
+            </item>
+            <item row="49" column="0">
+             <widget class="QLabel" name="label_47">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Дата выписки</string>
+              </property>
+             </widget>
+            </item>
+            <item row="40" column="1">
+             <widget class="QLineEdit" name="lineEdit_13"/>
+            </item>
+            <item row="18" column="0">
+             <widget class="QLabel" name="label_16">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Дата призыва</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_8">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Фамилия</string>
+              </property>
+             </widget>
+            </item>
+            <item row="29" column="0">
+             <widget class="QLabel" name="label_27">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Травма</string>
+              </property>
+             </widget>
+            </item>
+            <item row="12" column="0">
+             <widget class="QLabel" name="label">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>УМО</string>
+              </property>
+             </widget>
+            </item>
+            <item row="23" column="0">
+             <widget class="QLabel" name="label_21">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Статус</string>
+              </property>
+             </widget>
+            </item>
+            <item row="32" column="1">
+             <widget class="QLineEdit" name="lineEdit_21"/>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLabel" name="label_5">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Пол</string>
+              </property>
+             </widget>
+            </item>
+            <item row="43" column="1">
+             <widget class="QLineEdit" name="lineEdit_10"/>
+            </item>
+            <item row="28" column="0">
+             <widget class="QLabel" name="label_26">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>ВВК</string>
+              </property>
+             </widget>
+            </item>
+            <item row="39" column="0">
+             <widget class="QLabel" name="label_37">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Номер удостоверения личности</string>
+              </property>
+             </widget>
+            </item>
+            <item row="45" column="0">
+             <widget class="QLabel" name="label_43">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Предыдущее отделение</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <widget class="QComboBox" name="comboBox"/>
+            </item>
+            <item row="8" column="1">
+             <widget class="QComboBox" name="comboBox_2"/>
+            </item>
+            <item row="9" column="1">
+             <widget class="QComboBox" name="comboBox_3"/>
+            </item>
+            <item row="10" column="1">
+             <widget class="QComboBox" name="comboBox_4"/>
+            </item>
+            <item row="12" column="1">
+             <widget class="QComboBox" name="comboBox_5"/>
+            </item>
+            <item row="13" column="1">
+             <widget class="QComboBox" name="comboBox_6"/>
+            </item>
+            <item row="14" column="1">
+             <widget class="QComboBox" name="comboBox_7"/>
+            </item>
+            <item row="15" column="1">
+             <widget class="QComboBox" name="comboBox_8"/>
+            </item>
+            <item row="19" column="1">
+             <widget class="QComboBox" name="comboBox_9"/>
+            </item>
+            <item row="20" column="1">
+             <widget class="QComboBox" name="comboBox_10"/>
+            </item>
+            <item row="21" column="1">
+             <widget class="QComboBox" name="comboBox_11"/>
+            </item>
+            <item row="22" column="1">
+             <widget class="QComboBox" name="comboBox_12"/>
+            </item>
+            <item row="23" column="1">
+             <widget class="QComboBox" name="comboBox_13"/>
+            </item>
+            <item row="25" column="1">
+             <widget class="QComboBox" name="comboBox_14"/>
+            </item>
+            <item row="26" column="1">
+             <widget class="QComboBox" name="comboBox_15"/>
+            </item>
+            <item row="27" column="1">
+             <widget class="QComboBox" name="comboBox_16"/>
+            </item>
+            <item row="28" column="1">
+             <widget class="QComboBox" name="comboBox_17"/>
+            </item>
+            <item row="29" column="1">
+             <widget class="QComboBox" name="comboBox_18"/>
+            </item>
+            <item row="30" column="1">
+             <widget class="QComboBox" name="comboBox_19"/>
+            </item>
+            <item row="45" column="1">
+             <widget class="QComboBox" name="comboBox_20"/>
+            </item>
+            <item row="46" column="1">
+             <widget class="QComboBox" name="comboBox_21"/>
+            </item>
+            <item row="48" column="1">
+             <widget class="QComboBox" name="comboBox_22"/>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Дополнительная</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_50">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Электронная почта</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="lineEdit_51"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>Сохранить</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1106</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
