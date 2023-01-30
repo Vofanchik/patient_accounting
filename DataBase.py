@@ -62,6 +62,8 @@ class DataBase:
             Data_vypiski TEXT,
             Vypisnoi_diagnoz TEXT,
             Data_smerti TEXT,
+            
+            
 
            
            

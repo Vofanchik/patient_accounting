@@ -14,7 +14,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.pushButton.clicked.connect(self.save)
 
     def save(self):
-        print(self.ui.lineEdit_51.text())
+        print(self.ui.comboBox_22.currentText())
 
 app = QApplication(sys.argv)
 mw = MainWindow()
