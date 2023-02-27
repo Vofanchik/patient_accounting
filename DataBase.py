@@ -85,7 +85,6 @@ class DataBase:
         self.conn.commit()
 
     def add_items(self, **kwargs):  # создаем расходник
-        print(kwargs)
         self.cur.execute("INSERT INTO patients(Data_postupleniia, Vremya_postuplenia, Nomer_istorii_bolezni,Familiia, "
                          "Imia,Otchestvo,Pol, Kategoriia,Kontraktnaia_sluzhba,UrO, UMO,Komandir_chasti,"
                          "Zamestitel_komandira,Voinskaia_chast,Podrazdelenie_TerO,Data_rozhdeniia,Data_prizyva,"
