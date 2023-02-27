@@ -78,7 +78,9 @@ class DataBase:
             Data_vydachi_polisa text,
             Dannye_o_strakh_organizatcii text,
             SNILS text,
-            Osnovnoi_vid_oplaty text)''')
+            Osnovnoi_vid_oplaty text,
+            postupil_v text, 
+            Forma_okazaniia_meditcinskoi_pomoshchi text )''')
 
         self.conn.commit()
 
@@ -96,9 +98,10 @@ class DataBase:
                          "Vypisnoi_diagnoz,Data_smerti,Data_napravleniia,Nomer_napravleniia,Grazhdanstvo,El_pochta,"
                          "Subekt_RF,Raion,Gorod,Naselyonnyi_punkt,Ulitca,Dom,Stroenie_Korpus,Kvartira,Mestnost,"
                          "Mesto_raboty_ucheby,Polis_obiazatelnogo_strahovaniia,Data_vydachi_polisa,"
-                         "Dannye_o_strakh_organizatcii,SNILS,Osnovnoi_vid_oplaty) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,"
+                         "Dannye_o_strakh_organizatcii,SNILS,Osnovnoi_vid_oplaty, postupil_v,"
+                         " Forma_okazaniia_meditcinskoi_pomoshchi) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,"
                          "?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?"
-                         ",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", (kwargs['Data_postupleniia'],
+                         ",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", (kwargs['Data_postupleniia'],
                                                                             kwargs['Vremya_postuplenia'],
                                                                             kwargs['Nomer_istorii_bolezni'],
                                                                             kwargs['Familiia'],
@@ -163,7 +166,9 @@ class DataBase:
                                                                             kwargs['Data_vydachi_polisa'],
                                                                             kwargs['Dannye_o_strakh_organizatcii'],
                                                                             kwargs['SNILS'],
-                                                                            kwargs['Osnovnoi_vid_oplaty'],))
+                                                                            kwargs['Osnovnoi_vid_oplaty'],
+                                                                            kwargs['postupil_v'],
+                                                                            kwargs['Forma_okazaniia_meditcinskoi_pomoshchi'],))
         self.conn.commit()
 
         return self.cur.lastrowid
@@ -243,7 +248,9 @@ class DataBase:
                     'Data_vydachi_polisa':pl[63],
                     'Dannye_o_strakh_organizatcii':pl[64],
                     'SNILS':pl[65],
-                    'Osnovnoi_vid_oplaty':pl[66]
+                    'Osnovnoi_vid_oplaty':pl[66],
+                    'postupil_v': pl[67],
+                    'Forma_okazaniia_meditcinskoi_pomoshchi': pl[68]
 
 }
         return pat_dict
@@ -315,7 +322,10 @@ class DataBase:
                         "Data_vydachi_polisa = ?,"
                         "Dannye_o_strakh_organizatcii = ?,"
                         "SNILS = ?,"
-                        "Osnovnoi_vid_oplaty = ?"
+                        "Osnovnoi_vid_oplaty = ?,"
+                        "postupil_v = ?,"
+                        "Forma_okazaniia_meditcinskoi_pomoshchi = ?"
+                         
 
                          " where id = {}".format(pat_id), (kwargs['Data_postupleniia'],
                                                             kwargs['Vremya_postuplenia'],
@@ -382,7 +392,10 @@ class DataBase:
                                                             kwargs['Data_vydachi_polisa'],
                                                             kwargs['Dannye_o_strakh_organizatcii'],
                                                             kwargs['SNILS'],
-                                                            kwargs['Osnovnoi_vid_oplaty'],))
+                                                            kwargs['Osnovnoi_vid_oplaty'],
+                                                            kwargs['postupil_v'],
+                                                            kwargs['Forma_okazaniia_meditcinskoi_pomoshchi'],
+                                                           ))
         self.conn.commit()
 
     def delete_patient(self, id_patient: int):

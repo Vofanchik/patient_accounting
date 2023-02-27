@@ -117,6 +117,9 @@ class MainWindow(QtWidgets.QMainWindow):
 
         ui.dateEdit_5.setDate(from_str_to_date(0, context['Data_smerti']))
 
+        ui.comboBox_25.setCurrentText(context['postupil_v'])
+        ui.comboBox_26.setCurrentText(context['Forma_okazaniia_meditcinskoi_pomoshchi'])
+
         if context['Perevod'] == '':
             ui.checkBox.setChecked(False)
         else:ui.checkBox.setChecked(True)
@@ -202,7 +205,10 @@ class MainWindow(QtWidgets.QMainWindow):
                         'Data_vydachi_polisa': ui.dateEdit_8.text(),
                         'Dannye_o_strakh_organizatcii': ui.lineEdit_39.text(),
                         'SNILS': ui.lineEdit_34.text(),
-                        'Osnovnoi_vid_oplaty': ui.comboBox_24.currentText()
+                        'Osnovnoi_vid_oplaty': ui.comboBox_24.currentText(),
+                        'postupil_v': ui.comboBox_25.currentText(),
+                        'Forma_okazaniia_meditcinskoi_pomoshchi': ui.comboBox_26.currentText()
+
 }
         if ui.checkBox.checkState() == 2:
             patient_info['Perevod'] = 'из отделения в отделение'
@@ -250,6 +256,8 @@ class MainWindow(QtWidgets.QMainWindow):
         ui.comboBox_22.addItems(selects.Semeinoe_polozhenie)
         ui.comboBox_23.addItems(selects.Obrazovanie)
         ui.comboBox_24.addItems(selects.Osnovnoi_vid_oplaty)
+        ui.comboBox_25.addItems(selects.postupil_v)
+        ui.comboBox_26.addItems(selects.Forma_okazaniia_meditcinskoi_pomoshchi)
 
     def fill_patient_table(self, pats_list):
         patients_list_dict = []
@@ -279,12 +287,22 @@ class MainWindow(QtWidgets.QMainWindow):
             self.id = self.ui.tableWidget.item(self.ui.tableWidget.currentRow(), 2).text()
             context = db.show_patient_by_id(self.id)
             context['Data_postupleniia'] = from_dot_to_rec(1, context['Data_postupleniia'])
+            if context['Tekushchee_otdelenie'] in selects.otdelenie[:9]:
+                context['profil_coec'] = 'Хирургический'
+
+            else: context['profil_coec'] = 'Терапевтический'
+
             fname = QFileDialog.getSaveFileName(self, 'Save file',
                                                 '', "MS Office Document text files (*.docx)")
 
             tpl = DocxTemplate('Source_tpl.docx')
             tpl.render(context)
             tpl.save(fname[0])
+
+            tpl_sk = DocxTemplate('SK_tpl.docx')
+            tpl_sk.render(context)
+            tpl_sk.save(str(fname[0]).replace('.docx', ' стат карта.docx'))
+
         except: QMessageBox().warning(self, 'Предупреждение', "Выберите пациента", QMessageBox().Ok)
 
     def delete_patient(self):
@@ -368,7 +386,9 @@ class MainWindow(QtWidgets.QMainWindow):
                                 'Data_vydachi_polisa': ui.dateEdit_8.text(),
                                 'Dannye_o_strakh_organizatcii': ui.lineEdit_39.text(),
                                 'SNILS': ui.lineEdit_34.text(),
-                                'Osnovnoi_vid_oplaty': ui.comboBox_24.currentText()
+                                'Osnovnoi_vid_oplaty': ui.comboBox_24.currentText(),
+                                'postupil_v': ui.comboBox_25.currentText(),
+                                'Forma_okazaniia_meditcinskoi_pomoshchi': ui.comboBox_26.currentText()
                                 }
                 if ui.checkBox.checkState() == 2:
                     patient_info['Perevod'] = 'из отделения в отделение'
@@ -390,13 +410,13 @@ class MainWindow(QtWidgets.QMainWindow):
                 self.fill_patient_table(db.show_parients_fio_story())
         except: QMessageBox().warning(self, 'Предупреждение', "Выберите пациента", QMessageBox().Ok)
 
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    db = DataBase()
+    mw = MainWindow()
 
-app = QApplication(sys.argv)
-db = DataBase()
-mw = MainWindow()
+    mw.setWindowIcon(QIcon(QPixmap('UI_files/patient.gif')))
 
-mw.setWindowIcon(QIcon(QPixmap('UI_files/patient.gif')))
+    mw.show()
 
-mw.show()
-
-sys.exit(app.exec_())
+    sys.exit(app.exec_())
