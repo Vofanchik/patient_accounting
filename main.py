@@ -292,6 +292,12 @@ class MainWindow(QtWidgets.QMainWindow):
 
             else: context['profil_coec'] = 'Терапевтический'
 
+            if context['Data_vydachi_polisa'] == '01.01.2000':
+                context['Data_vydachi_polisa'] = ''
+
+            if context['Kontraktnaia_sluzhba'] == 'да':
+                context['ks'] = 'кс'
+
             fname = QFileDialog.getSaveFileName(self, 'Save file',
                                                 '', "MS Office Document text files (*.docx)")
 
