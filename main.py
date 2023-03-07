@@ -296,7 +296,7 @@ class MainWindow(QtWidgets.QMainWindow):
                 context['Data_vydachi_polisa'] = ''
 
             if context['Kontraktnaia_sluzhba'] == 'да':
-                context['ks'] = 'кс'
+                context['ks'] = 'к/с'
 
             fname = QFileDialog.getSaveFileName(self, 'Save file',
                                                 '', "MS Office Document text files (*.docx)")
